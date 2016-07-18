@@ -1,1 +1,3 @@
-# mionio_based_am
+# mionio
+
+Learning and building a personal project.
