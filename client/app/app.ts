@@ -17,6 +17,6 @@ angular.module('mionioApp', [
       .otherwise('/');
     $locationProvider.html5Mode(true);
   $mdThemingProvider.theme('default')
-    .primaryPalette('orange')
+    .primaryPalette('cyan')
     .accentPalette('grey');
   });
