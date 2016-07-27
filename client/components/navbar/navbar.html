@@ -27,27 +27,30 @@
     </div>
   </div>
 </div>-->
-   <md-toolbar class="md-primary md-whiteframe="1">
+   <md-toolbar class="md-primary md-whiteframe-glow-z1">
       <div class="md-toolbar-tools">
         <md-button ng-show="nav.isLoggedIn()" ng-click="nav.toggleLeft()" class="md-icon-button" aria-label="Menu" hide-gt-md>
-          <i class="material-icons">menu</i>
+          <i style="color:#00E5FF;" class="material-icons">menu</i>
         </md-button>
-        <a href="/">
-          <b>M</b>io<b>N</b>io
+        <a href="/" style="color:#00E5FF;">
+          <b>MioNio</b>
         </a>
         <span flex></span>
-        <h5 ng-show="nav.isLoggedIn()">Hello, {{ nav.getCurrentUser().name }}</h5>
-        <md-button ng-hide="nav.isLoggedIn()" aria-label="Login">
-          <a href="login">login</a>
+        <!--<h5 ng-show="nav.isLoggedIn()">Hello, {{ nav.getCurrentUser().name }}</h5>-->
+        <md-button ng-hide="nav.isLoggedIn()" class="md-raised"  aria-label="Login">
+          <a style="color:#00E5FF;"  href="login">login</a>
         </md-button>
-        <md-button ng-show="nav.isLoggedIn()" aria-label="Logout">
-          <a href="logout">Logout</a>
+        <md-button ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Notifications">
+          <a style="color:#00E5FF;" class="material-icons"  href="">notifications</a>
         </md-button>
-        <md-button ng-hide="nav.isLoggedIn()" aria-label="Signup">
-          <a href="signup">Sign up</a>
+        <md-button ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="More">
+          <a style="color:#00E5FF;" class="material-icons"  href="">more_vert</a>
+        </md-button>
+        <md-button ng-hide="nav.isLoggedIn()" class="md-raised" aria-label="Signup">
+          <a style="color:#00E5FF;"  href="signup">Sign up</a>
         </md-button>
         <!--<md-button class="md-icon-button" aria-label="More">
           <i class="material-icons">person_add</i>
-        </md-button>-->
+        </md-button>
       </div>
     </md-toolbar>

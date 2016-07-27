@@ -25,3 +25,28 @@
 .navbar-text {
   margin-left: 15px;
 }
+
+.parallax-e {
+    /* The image used */
+    background-image: url('../assets/images/home_background_01.jpg');
+
+    /* Full height */
+    height: 100%; 
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.height-page-size {
+  height: 100vh;
+}
+
+.md-whiteframe-glow-z1 {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14),
+              0px 0px 2px 2px rgba(0, 0, 0, 0.098),
+              0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
