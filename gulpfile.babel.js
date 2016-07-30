@@ -520,6 +520,7 @@ gulp.task('build', cb => {
             'build:images',
             'copy:extras',
             'copy:fonts',
+            'copy:m-icons-fonts',
             'copy:assets',
             'copy:server',
             'build:client'
@@ -610,6 +611,11 @@ gulp.task('copy:extras', () => {
 gulp.task('copy:fonts', () => {
     return gulp.src(`${clientPath}/bower_components/{font-awesome}/fonts/**/*`, { dot: true })
         .pipe(gulp.dest(`${paths.dist}/${clientPath}/bower_components`));
+});
+
+gulp.task('copy:m-icons-fonts', () => {
+    return gulp.src(`${clientPath}/bower_components/material-design-icons/iconfont/*.+(eot|woff2|woff|ttf)`, { dot: true })
+        .pipe(gulp.dest(`${paths.dist}/${clientPath}/bower_components/material-design-icons/iconfont`));
 });
 
 gulp.task('copy:assets', () => {
