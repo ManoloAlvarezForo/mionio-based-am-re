@@ -17,25 +17,22 @@ angular.module('mionioApp', [
       .otherwise('/');
     $locationProvider.html5Mode(true);
   $mdThemingProvider.definePalette('customPalette', {
-    '50': '00E5E9',
-    '100': 'ffcdd2',
-    '200': 'ef9a9a',
-    '300': 'e57373',
-    '400': 'ef5350',
-    '500': '37474F',
-    '600': 'e53935',
-    '700': 'd32f2f',
-    '800': 'c62828',
-    '900': 'b71c1c',
-    'A100': 'ff8a80',
-    'A200': 'ff5252',
-    'A400': 'ff1744',
-    'A700': 'd50000',
-    'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
-                                        // on this palette should be dark or light
-    'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
-     '200', '300', '400', 'A100'],
-    'contrastLightColors': undefined    // could also specify this if default was 'dark'
+  '50': '#d7f0f1',
+  '100': '#9edbde',
+  '200': '#74cbcf',
+  '300': '#41b6bb',
+  '400': '#39a0a5',
+  '500': '#318a8e',
+  '600': '#297477',
+  '700': '#215e60',
+  '800': '#19484a',
+  '900': '#123233',
+  'A100': '#d7f0f1',
+  'A200': '#9edbde',
+  'A400': '#39a0a5',
+  'A700': '#215e60',
+  'contrastDefaultColor': 'light',
+  'contrastDarkColors': '50 100 200 300 400 A100 A200 A400'
   });
   $mdThemingProvider.theme('default')
     .primaryPalette('customPalette');

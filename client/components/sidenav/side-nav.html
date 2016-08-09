@@ -19,14 +19,212 @@
                 </md-list-item>
             </md-content>
         </md-sidenav>
-        <section layout="column" flex>
-            <navbar></navbar>
-            <md-content flex  layout='column'>
-                <div layout="column" layout-fill>
-                    <div flex='auto' ui-view="" style="background-color:#f5f5f5 !important;"></div>
-                    <footer flex="20"></footer>
-                </div>
-            </md-content>
+        <section layout="row" flex>
+            <div layout="column" flex="auto">
+                <navbar></navbar>
+                <md-tabs flex="100" md-border-bottom>
+                    <md-tab label="one">
+                        <md-content layout='column'>
+                            <div layout="column" layout-fill>
+                                <!--<div flex='auto' ui-view="" style="background-image: url('../assets/images/textura10.jpg'); height: 100%; background-size: cover;"></div>-->
+                                <div flex='auto' ui-view=""></div>
+                                <!--<footer flex="20"></footer>-->
+                            </div>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="two">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Two</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus
+                                volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium
+                                ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.
+                                Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim,
+                                vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur
+                                a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis
+                                tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed
+                                felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis
+                                tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur
+                                faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec
+                                luctus mauris semper.</p>
+                            <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec
+                                magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis.
+                                Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras
+                                ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor
+                                turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl
+                                consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere
+                                molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit
+                                erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac
+                                est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="three">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-2">Tab Three</h1>
+                            <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere
+                                molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit
+                                erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac
+                                est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+
+            </div>
+            <div layout="column" flex="33" hide-xs>
+                <md-toolbar class="md-primary md-whiteframe-glow-z1">
+                    <div class="md-toolbar-tools">
+                        <a href="/">
+                            <b>Pedidos</b>
+                        </a>
+                        <span flex></span>
+                        <md-button class="md-icon-button" aria-label="Menu">
+                            <a class="material-icons" href="">menu</a>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="More">
+                            <a class="material-icons" href="">more_vert</a>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+
+                <md-content flex layout='column'>
+                    <div layout="column" layout-fill>
+                        <div flex='auto' style="background-color:#f5f5f5 !important;">
+                            <div layout='row' flex-offset-sm="0" flex-offset-md="0" flex-offset-lg="0" flex-offset-gt-lg="0" layout-wrap layout-align="center center">
+                                <md-card>
+                                    <img src="../assets/images/silpancho.jpg" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card>
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card>
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card>
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                                <md-card flex="40">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <h3>Card headline</h3>
+                                        <p>descripcion</p>
+                                    </md-card-content>
+                                    <md-card-actions layout="row" layout-align="end center">
+                                        <md-button>Action 2</md-button>
+                                    </md-card-actions>
+                                </md-card>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+            </div>
         </section>
     </section>
 </div>
