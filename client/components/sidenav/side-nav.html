@@ -1,9 +1,10 @@
 <div layout="column" style="height:100%;" ng-cloak>
     <section layout="row" flex>
-        <md-sidenav ng-show="snav.isLoggedIn()" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"
-            md-disable-backdrop md-whiteframe="4">
-            <md-toolbar>
-                <md-list-item class="md-2-line">
+        <md-sidenav ng-show="snav.isLoggedIn()" class="md-sidenav-left" md-component-id="left"" md-is-locked-open="$mdMedia('gt-md')"
+         md-disable-backdrop md-whiteframe="4">
+            <md-toolbar class="md-tall" layout="column">
+                <h3 flex="None">Logo</h3>
+                <md-list-item flex="auto" class="md-2-line">
                     <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
                     <div class="md-list-item-text" layout="column">
                         <h3>{{ nav.getCurrentUser().name}}</h3>
@@ -13,20 +14,17 @@
             </md-toolbar>
             <md-content>
                 <md-subheader class="md-no-sticky">Opciones</md-subheader>
-                <md-list-item ng-click="snav.logout()">
-                    <md-icon class="material-icons">exit_to_app</md-icon>
-                    <p>Salir</p>
+                <md-list-item ng-click="option.action()" ng-repeat="option in snav.options">
+                    <md-icon class="material-icons">{{option.icon}}</md-icon>
+                    <p>{{option.name}}</p>
                 </md-list-item>
             </md-content>
         </md-sidenav>
-        <section layout="column" flex>
-            <navbar></navbar>
-            <md-content flex  layout='column'>
-                <div layout="column" layout-fill>
-                    <div flex='auto' ui-view="" style="background-color:#f5f5f5 !important;"></div>
-                    <footer flex="20"></footer>
-                </div>
-            </md-content>
+        <section layout="row" flex>
+            <div layout="column" flex="auto">
+                <navbar></navbar>
+                <md-content layout="row" layout-align="center" ui-view flex="100"></md-content>
+            </div>
         </section>
     </section>
 </div>

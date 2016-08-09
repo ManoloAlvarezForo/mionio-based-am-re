@@ -6,6 +6,17 @@ class SideNavController {
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
     this.state = $state;
+    this.options = [
+    {name: 'Pedido',
+     icon: 'local_dining',
+     action: function() {
+       $state.go('order');
+     }
+    }];
+  }
+
+  gotoOrder() {
+    this.state.go('order');
   }
 
   logout() {
