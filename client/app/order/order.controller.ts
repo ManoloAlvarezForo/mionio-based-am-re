@@ -1,22 +1,11 @@
 'use strict';
 
-class SideNavController {
+class OrderController {
   constructor(Auth, $mdSidenav, $log, $state) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
     this.state = $state;
-    this.options = [
-    {name: 'Pedido',
-     icon: 'local_dining',
-     action: function() {
-       $state.go('order');
-     }
-    }];
-  }
-
-  gotoOrder() {
-    this.state.go('order');
   }
 
   logout() {
@@ -25,4 +14,4 @@ class SideNavController {
 }
 
 angular.module('mionioApp')
-  .controller('SideNavController', SideNavController);
+  .controller('OrderController', OrderController);

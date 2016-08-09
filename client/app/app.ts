@@ -3,6 +3,7 @@
 angular.module('mionioApp', [
   'mionioApp.auth',
   'mionioApp.admin',
+  'mionioApp.order',
   'mionioApp.constants',
   'ngCookies',
   'ngResource',
