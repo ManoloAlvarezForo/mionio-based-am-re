@@ -1,9 +1,10 @@
 <div layout="column" style="height:100%;" ng-cloak>
     <section layout="row" flex>
-        <md-sidenav ng-show="snav.isLoggedIn()" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"
-            md-disable-backdrop md-whiteframe="4">
-            <md-toolbar>
-                <md-list-item class="md-2-line">
+        <md-sidenav ng-show="snav.isLoggedIn()" class="md-sidenav-left" md-component-id="left"" md-is-locked-open="$mdMedia('gt-md')"
+         md-disable-backdrop md-whiteframe="4">
+            <md-toolbar class="md-tall" layout="column">
+                <h3 flex="None">Logo</h3>
+                <md-list-item flex="auto" class="md-2-line">
                     <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
                     <div class="md-list-item-text" layout="column">
                         <h3>{{ nav.getCurrentUser().name}}</h3>
@@ -22,7 +23,7 @@
         <section layout="row" flex>
             <div layout="column" flex="auto">
                 <navbar></navbar>
-                <md-tabs flex="100" md-border-bottom>
+                <md-tabs class="md-primary" md-swipe-content="true"  flex="100" md-border-bottom md-center-tabs="true">
                     <md-tab label="one">
                         <md-content layout='column'>
                             <div layout="column" layout-fill>
@@ -71,27 +72,53 @@
 
             </div>
             <div layout="column" flex="33" hide-xs>
-                <md-toolbar class="md-primary md-whiteframe-glow-z1">
+                <md-toolbar>
                     <div class="md-toolbar-tools">
                         <a href="/">
-                            <b>Pedidos</b>
+                            <b>Pedido</b>
                         </a>
                         <span flex></span>
-                        <md-button class="md-icon-button" aria-label="Menu">
-                            <a class="material-icons" href="">menu</a>
+                        <md-button class="md-icon-button" aria-label="Person add">
+                            <a class="material-icons" href="">person_add</a>
                         </md-button>
-                        <md-button class="md-icon-button" aria-label="More">
-                            <a class="material-icons" href="">more_vert</a>
+                        <md-button ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Notifications">
+                            <a class="material-icons" href="">notifications</a>
                         </md-button>
                     </div>
                 </md-toolbar>
-
+                <md-toolbar style="min-height:49px; height:49px;">
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Person add">
+                            <a class="material-icons" href="">person_add</a>
+                        </md-button>
+                    </div>
+                </md-toolbar>
                 <md-content flex layout='column'>
                     <div layout="column" layout-fill>
                         <div flex='auto' style="background-color:#f5f5f5 !important;">
                             <div layout='row' flex-offset-sm="0" flex-offset-md="0" flex-offset-lg="0" flex-offset-gt-lg="0" layout-wrap layout-align="center center">
                                 <md-card>
-                                    <img src="../assets/images/silpancho.jpg" class="md-card-image" alt="image caption">
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card>
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
+                                    <md-card-content>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
+                                    </md-card-content>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
+                                </md-card>
+                                <md-card>
+                                    <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
                                         <!--<h2>Card headline</h2>-->
                                         <p><b>Card content</b></p>
@@ -130,96 +157,97 @@
                                         Card footer
                                     </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
-                                <md-card flex="40">
+                                <md-card>
                                     <img src="../assets/images/yeoman.png" class="md-card-image" alt="image caption">
                                     <md-card-content>
-                                        <h3>Card headline</h3>
-                                        <p>descripcion</p>
+                                        <!--<h2>Card headline</h2>-->
+                                        <p><b>Card content</b></p>
                                     </md-card-content>
-                                    <md-card-actions layout="row" layout-align="end center">
-                                        <md-button>Action 2</md-button>
-                                    </md-card-actions>
+                                    <!--<md-card-footer>
+                                        Card footer
+                                    </md-card-footer>-->
                                 </md-card>
+
                             </div>
                         </div>
                     </div>
