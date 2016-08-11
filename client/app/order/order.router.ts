@@ -8,6 +8,6 @@ angular.module('mionioApp.order')
         templateUrl: 'app/order/order.html',
         controller: 'OrderController',
         controllerAs: 'order',
-        authenticate: 'admin'
+        authenticate: 'user'
       });
   });

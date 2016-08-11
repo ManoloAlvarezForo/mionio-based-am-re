@@ -5,6 +5,7 @@ angular.module('mionioApp', [
   'mionioApp.admin',
   'mionioApp.order',
   'mionioApp.constants',
+  'mionioApp.angular-material-sidenav',
   'ngCookies',
   'ngResource',
   'ngSanitize',

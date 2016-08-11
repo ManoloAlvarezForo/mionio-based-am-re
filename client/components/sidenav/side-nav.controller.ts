@@ -1,22 +1,14 @@
 'use strict';
 
 class SideNavController {
-  constructor(Auth, $mdSidenav, $log, $state) {
+  constructor(Auth, $mdSidenav, $log, $state, ssSideNav, $timeout) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
     this.state = $state;
-    this.options = [
-    {name: 'Pedido',
-     icon: 'local_dining',
-     action: function() {
-       $state.go('order');
-     }
-    }];
-  }
-
-  gotoOrder() {
-    this.state.go('order');
+    this.timeout = $timeout;
+    this.menu = ssSideNav;
+    this.hello = 'hello';
   }
 
   logout() {
