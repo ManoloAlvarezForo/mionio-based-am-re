@@ -1,0 +1,19 @@
+<md-content style="background-color:#B8D20B">
+    <div layout='row' flex-offset-sm="0" flex-offset-md="0" flex-offset-lg="0" flex-offset-gt-lg="0" layout-wrap layout-align="center center">
+        <md-card md-theme-watch ng-repeat='table in tables.mocktables'>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Mesa - {{table.identifier}}</span>
+                    <span md-style-color="{'background-color':'lettuce.500', 'color':'lettuce.50'}" class="md-subhead">Disponible</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-lg card-media"></div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button md-style-color="{'background-color':'accent.default', 'color':'accent.50'}" ng-click="tables.goToOrder(table);"
+                    class="md-raised">Realizar pedido</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</md-content>

@@ -11,12 +11,12 @@ angular.module('mionioApp')
       })
       .state('logout', {
         url: '/logout?referrer',
-        referrer: 'main',
+        referrer: 'welcome',
         template: '',
         controller: function($state, Auth) {
           var referrer = $state.params.referrer ||
                           $state.current.referrer ||
-                          'main';
+                          'welcome';
           Auth.logout();
           $state.go(referrer);
         }
