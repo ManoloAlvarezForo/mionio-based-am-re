@@ -26,7 +26,7 @@ describe('Component: mainComponent', function() {
 
       scope = $rootScope.$new();
       state = $state;
-      mainComponent = $componentController('main', {
+      mainComponent = $componentController('welcome', {
         $http: $http,
         $scope: scope,
         socket: socket

@@ -19,7 +19,6 @@
     <!-- build:css({.tmp,client}) app/app.css -->
       <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
-      <link rel="stylesheet" href="components/sidenav/angular-material-sidenav.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -29,7 +28,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-     <side-nav></side-nav>
+     <main style="height:100%;"></main>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -68,8 +67,8 @@
       <!-- injector:js -->
       <script src="app/admin/admin.module.js"></script>
       <script src="app/order/order.module.js"></script>
+      <script src="app/tables/tables.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
-      <script src="components/sidenav/side-nav.module.js"></script>
       <script src="components/util/util.module.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/account/login/login.controller.js"></script>
@@ -79,14 +78,17 @@
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/main/main.controller.js"></script>
-      <script src="app/main/main.js"></script>
+      <script src="app/main/main.directive.js"></script>
       <script src="app/order/order.controller.js"></script>
-      <script src="app/order/order.directive.js"></script>
       <script src="app/order/order.router.js"></script>
+      <script src="app/tables/tables.controller.js"></script>
+      <script src="app/welcome/welcome.controller.js"></script>
+      <script src="app/welcome/welcome.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
       <script src="components/auth/user.service.js"></script>
+      <script src="components/common/notifying.service.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>
@@ -94,17 +96,9 @@
       <script src="components/navbar/navbar.directive.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
-      <script src="components/sidenav/menu-link.controller.js"></script>
-      <script src="components/sidenav/menu-link.directive.js"></script>
-      <script src="components/sidenav/menu-toggle.directive.js"></script>
-      <script src="components/sidenav/menu-toogle.controller.js"></script>
-      <script src="components/sidenav/side-nav.controller.js"></script>
-      <script src="components/sidenav/side-nav.directive.js"></script>
-      <script src="components/sidenav/side-nav.js"></script>
-      <script src="components/sidenav/ssSideNav.service.js"></script>
-      <script src="components/sidenav/ssSideNavShared.service.js"></script>
-      <script src="components/sidenav/ssSidenav.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>
+      <script src="components/style-color/style-color.directive.js"></script>
+      <script src="components/style-color/style-color.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->

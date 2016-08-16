@@ -1,4 +1,32 @@
-<md-content layout="column" layout-align="center center">
-    <p style="font-size:60px;" flex="auto"><b>Pagina de inicio</b></p>
-    
-</md-content>
+<div layout="column" style="height:100%;" ng-cloak>
+    <section layout="row" flex>
+        <md-sidenav  ng-show="main.isLoggedIn()" class="md-sidenav-left" md-component-id="left"" md-is-locked-open="$mdMedia('gt-md')"
+         md-disable-backdrop md-whiteframe="4" layout="column">
+            <md-toolbar md-style-color="{'background-color':'accent.default'}" class="md-tall" layout="column">
+                <h3 flex="None">Logo</h3>
+                <md-list-item flex="auto" class="md-2-line">
+                    <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{ nav.getCurrentUser().name}}</h3>
+                        <h4>{{ nav.getCurrentUser().email}}</h4>
+                    </div>
+                </md-list-item>
+            </md-toolbar>
+            <md-divider md-style-color="{'border-top-color':'accent.200'}" ></md-divider>
+            <md-content md-style-color="{'background-color':'accent.default'}" flex="100">
+                <md-subheader md-style-color="{'background-color':'accent.default', 'color':'accent.50'}" class="md-no-sticky">Pedido:</md-subheader>
+                <md-list-item md-style-color="{'background-color':'accent.default'}" ng-click="option.action()" ng-repeat="option in main.options">
+                    <md-icon class="material-icons" md-style-color="{'color':'accent.50'}">{{option.icon}}</md-icon>
+                    <p md-style-color="{'color':'accent.50'}">{{option.name}}</p>
+                </md-list-item>
+            </md-content>
+        </md-sidenav>
+        
+        <section layout="row " flex>
+            <div layout="column " flex="auto ">
+                <navbar></navbar>
+                <md-content style="background-color:#B8D20B" layout="row" layout-align="center" ui-view flex="100 "></md-content>
+            </div>
+        </section>
+    </section>
+</div>

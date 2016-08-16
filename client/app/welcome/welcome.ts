@@ -3,8 +3,8 @@
 angular.module('mionioApp')
   .config(function($stateProvider) {
     $stateProvider
-      .state('main', {
-        url: '/',
-        template: '<main></main>'
+      .state('welcome', {
+        url: '/welcome',
+        template: '<welcome></welcome>'
       });
   });

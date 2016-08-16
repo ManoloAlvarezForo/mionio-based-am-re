@@ -1,42 +1,34 @@
 'use strict';
 
-(function() {
-
 class MainController {
-
-  constructor($http, $scope, socket) {
-    this.$http = $http;
-    this.socket = socket;
-    this.awesomeThings = [];
-
-    $scope.$on('$destroy', function() {
-      socket.unsyncUpdates('thing');
-    });
+  constructor(Auth, $mdSidenav, $log, $state, $timeout) {
+    this.isLoggedIn = Auth.isLoggedIn;
+    this.isAdmin = Auth.isAdmin;
+    this.getCurrentUser = Auth.getCurrentUser;
+    this.state = $state;
+    this.timeout = $timeout;
+    this.options = [
+    {name: 'Mesas',
+     icon: 'dashboard',
+     action: function() {
+       $state.go('tables');
+     }
+    },
+    {name: 'Para llevar',
+     icon: 'directions_walk',
+     action: function() {
+       $state.go('order', {
+         type: 'togo',
+         identifier: 1
+       });
+     }
+    }];
   }
 
-  $onInit() {
-    this.$http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-      this.socket.syncUpdates('thing', this.awesomeThings);
-    });
-  }
-
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
-    }
-  }
-
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
+  logout() {
+    this.state.go('logout');
   }
 }
 
 angular.module('mionioApp')
-  .component('main', {
-    templateUrl: 'app/main/main.html',
-    controller: MainController
-  });
-
-})();
+  .controller('MainController', MainController);
