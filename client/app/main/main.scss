@@ -72,3 +72,7 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+md-card>:not(md-card-content) img, md-card>img {
+  height: 100% !important;
+}

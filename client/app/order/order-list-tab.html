@@ -1,0 +1,20 @@
+<md-content id="tablist" style="overflow: hidden; background-color:#B8D20B" layout='row'>
+    <div layout='row' layout-wrap layout-align="center center">
+        <md-card layout="column" flex="30" flex-xs="100" flex-sm="100" flex-md="40" flex-gt-md="30" style="max-height:430px; min-height:430px;" md-style-color="{'background-color':'primary.default', 'color':'accent.50'}"
+            md-theme-watch ng-repeat="item in list">
+            <img class="md-card-image" alt="Image" src="{{item.url}}" style="max-height:260px; min-height:260px;">
+            <md-card-content flex="80" layout="column" layout-fill>
+                <div flex="100">
+                    <div class="md-headline" md-style-color="{'color':'accent.50'}"><b>{{item.itenname}}</b></div>
+                    <div class="md-subhead"><small>{{item.description}}</small></div>
+                </div>
+            </md-card-content>
+            <md-card-actions flex="20" layout="row" layout-align="center end" layout-padding layout-fill>
+                <div layout="column" layout-align="center start" class="md-headline" flex="90"><b>{{item.price}} {{item.currency}}</b></div>
+                <div layout="row" layout-align="end center" flex="auto">
+                    <md-button md-style-color="{'background-color':'salmon.default', 'color':'accent.50'}">Pedir ahora</md-button>
+                </div>
+            </md-card-actions>
+        </md-card>
+    </div>
+</md-content>

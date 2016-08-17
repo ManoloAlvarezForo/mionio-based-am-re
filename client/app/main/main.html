@@ -1,6 +1,6 @@
-<div layout="column" style="height:100%;" ng-cloak>
+<div layout="column" style="height:100%;" ng-cloak flex>
     <section layout="row" flex>
-        <md-sidenav  ng-show="main.isLoggedIn()" class="md-sidenav-left" md-component-id="left"" md-is-locked-open="$mdMedia('gt-md')"
+        <md-sidenav  ng-show="main.isLoggedIn()" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')"
          md-disable-backdrop md-whiteframe="4" layout="column">
             <md-toolbar md-style-color="{'background-color':'accent.default'}" class="md-tall" layout="column">
                 <h3 flex="None">Logo</h3>
@@ -21,11 +21,10 @@
                 </md-list-item>
             </md-content>
         </md-sidenav>
-        
-        <section layout="row " flex>
-            <div layout="column " flex="auto ">
+        <section layout="row" flex>
+            <div layout="column " flex="100">
                 <navbar></navbar>
-                <md-content style="background-color:#B8D20B" layout="row" layout-align="center" ui-view flex="100 "></md-content>
+                <md-content style="background-color:#B8D20B" layout="row" layout-align="center" ui-view flex="100"></md-content>
             </div>
         </section>
     </section>
