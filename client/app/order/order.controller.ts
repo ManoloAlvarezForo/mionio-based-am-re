@@ -10,31 +10,31 @@ class OrderController {
       tabname: 'HOY',
       list: [
         {
-          itenname: 'Sillpancho',
+          name: 'Sillpancho',
           price: 25,
           currency: 'Bs',
-          description: 'Arroz, Carne, Ensalada, Papas fritas y Huevo',
+          shortDescription: 'Arroz, Carne, Ensalada, Papas fritas y Huevo',
           url: '../assets/images/silpancho.jpg'
         },
         {
-          itenname: 'Sopa de mani',
+          name: 'Sopa de mani',
           price: 10,
           currency: 'Bs',
-          description: 'Mani, Fideo y Papas fritas',
+          shortDescription: 'Mani, Fideo y Papas fritas',
           url: '../assets/images/sopademani.jpg'
         },
         {
-          itenname: 'Lechon al horno',
+          name: 'Lechon al horno',
           price: 25,
           currency: 'Bs',
-          description: 'Lechon fresco, Ensalada, Papas cocidas y Platanos cocidos',
+          shortDescription: 'Lechon fresco, Ensalada y Papas cocidas',
           url: '../assets/images/lechon.jpg'
         },
         {
-          itenname: 'Keperi',
+          name: 'Keperi',
           price: 25,
           currency: 'Bs',
-          description: 'Carne de res, Arroz, Ensalada y Papas fritas',
+          shortDescription: 'Carne de res, Arroz, Ensalada y Papas fritas',
           url: '../assets/images/keperi.jpg'
         }
       ]
@@ -43,31 +43,31 @@ class OrderController {
       tabname: 'EXTRAS',
       list: [
         {
-          itenname: 'Churrasco',
+          name: 'Churrasco',
           price: 100,
           currency: 'Bs',
-          description: 'Arroz con queso, Carne especial, Ensalada y Papas fritas',
+          shortDescription: 'Arroz con queso, Carne especial y Papas fritas',
           url: '../assets/images/carneparrilla.jpg'
         },
         {
-          itenname: 'Aji de lengua',
+          name: 'Aji de lengua',
           price: 10,
           currency: 'Bs',
-          description: 'Lengua, Picante, Arroz y Papas cocidas',
+          shortDescription: 'Lengua, Picante, Arroz y Papas cocidas',
           url: '../assets/images/picantelengua.jpg'
         },
         {
-          itenname: 'Ceviche',
+          name: 'Ceviche',
           price: 10,
           currency: 'Bs',
-          description: 'Pescado fresco, Ensalada y Papas cocidas',
+          shortDescription: 'Pescado fresco, Ensalada y Papas cocidas',
           url: '../assets/images/ceviche.jpg'
         },
         {
-          itenname: 'Pique macho',
+          name: 'Pique macho',
           price: 10,
           currency: 'Bs',
-          description: 'Carbe de res, Papas fritas, Chorizo y Huevo',
+          shortDescription: 'Carbe de res, Papas fritas, Chorizo y Huevo',
           url: '../assets/images/piquemacho.jpg'
         }
       ]
@@ -76,38 +76,38 @@ class OrderController {
       tabname: 'BEBIDAS',
       list: [
         {
-          itenname: 'Coca cola',
+          name: 'Coca cola',
           price: 11,
           currency: 'Bs',
-          description: '2 litros',
+          shortDescription: '2 litros',
           url: '../assets/images/coca2litros.jpg'
         },
         {
-          itenname: 'Coca cola',
+          name: 'Coca cola',
           price: 2,
           currency: 'Bs',
-          description: '300 ml mini',
+          shortDescription: '300 ml mini',
           url: '../assets/images/cocamini.jpg'
         },
         {
-          itenname: 'Limonada',
+          name: 'Limonada',
           price: 10,
           currency: 'Bs',
-          description: '2 litros Jarra',
+          shortDescription: '2 litros Jarra',
           url: '../assets/images/limonada.jpg'
         },
         {
-          itenname: 'Cerveza Huari',
+          name: 'Cerveza Huari',
           price: 13,
           currency: 'Bs',
-          description: '600 ml',
-          url: '../assets/images/huari2.jpg'
+          shortDescription: '600 ml',
+          url: '../assets/images/huari.jpg'
         },
         {
-          itenname: 'Ron Abuelo',
+          name: 'Ron Abuelo',
           price: 10,
           currency: 'Bs',
-          description: 'Grande',
+          shortDescription: 'Grande',
           url: '../assets/images/ronabuelo.jpg'
         }
       ]
@@ -116,38 +116,38 @@ class OrderController {
       tabname: 'POSTRES',
       list: [
         {
-          itenname: 'Napoleon',
+          name: 'Napoleon',
           price: 11,
           currency: 'Bs',
-          description: 'Crema',
+          shortDescription: 'Crema',
           url: '../assets/images/napoleon.jpg'
         },
         {
-          itenname: 'Gelatina',
+          name: 'Gelatina',
           price: 2,
           currency: 'Bs',
-          description: ['Vaso'],
+          shortDescription: 'Vaso',
           url: '../assets/images/gelatina.jpg'
         },
         {
-          itenname: 'Fruta variada',
+          name: 'Fruta variada',
           price: 10,
           currency: 'Bs',
-          description: 'Papaya, Platano y Naranja',
+          shortDescription: 'Papaya, Platano y Naranja',
           url: '../assets/images/fruta.jpg'
         },
         {
-          itenname: 'Flan',
+          name: 'Flan',
           price: 13,
           currency: 'Bs',
-          description: 'Vaso',
+          shortDescription: 'Vaso',
           url: '../assets/images/flan.jpg'
         },
         {
-          itenname: 'Dona',
+          name: 'Dona',
           price: 10,
           currency: 'Bs',
-          description: 'Leche porcion',
+          shortDescription: 'Leche porcion',
           url: '../assets/images/dona.jpg'
         }
       ]

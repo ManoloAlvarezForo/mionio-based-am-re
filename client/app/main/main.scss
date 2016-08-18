@@ -76,3 +76,24 @@
 md-card>:not(md-card-content) img, md-card>img {
   height: 100% !important;
 }
+
+.m-truncate-90 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    /* required for Opera */
+    -ms-text-overflow: ellipsis;
+    /* required for IE8, allegedly */
+    -moz-binding: url('ellipsis.xml#ellipsis');
+}
+
+.long-and-truncated-with-child-corrected {
+  flex: 1;
+  min-width: 0; /* or some value */
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
