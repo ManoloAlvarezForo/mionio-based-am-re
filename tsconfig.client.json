@@ -21,6 +21,7 @@
         "client/app/main/main.controller.ts",
         "client/app/main/main.directive.ts",
         "client/app/order/order.controller.ts",
+        "client/app/order/order.list.directive.ts",
         "client/app/order/order.module.ts",
         "client/app/order/order.router.ts",
         "client/app/tables/tables.controller.ts",
