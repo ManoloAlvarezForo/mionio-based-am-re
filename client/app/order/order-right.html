@@ -1,0 +1,47 @@
+<md-toolbar style="min-height:49px; height:49px;">
+        <div class="md-toolbar-tools">
+            <a href="/">
+                <b>{{order.thereIsAnItemSelected  ? order.oldItemSelected.name : 'Pedido'}}</b>
+            </a>
+            <span flex></span>
+            <md-button ng-show="!order.thereIsAnItemSelected" class="md-icon-button" aria-label="Person add">
+                <a class="material-icons" href="">person_add</a>
+            </md-button>
+            <md-button ng-show="!order.thereIsAnItemSelected" class="md-icon-button" aria-label="Notifications">
+                <a class="material-icons" href="">notifications</a>
+            </md-button>
+            <md-button ng-show="order.thereIsAnItemSelected" ng-click="order.incrementItem()" class="md-icon-button" aria-label="Person add">
+                <a class="material-icons" href="">add</a>
+            </md-button>
+            <md-button ng-show="order.thereIsAnItemSelected" ng-click="order.decrementItem()" class="md-icon-button" aria-label="Notifications">
+                <a class="material-icons" href="">remove</a>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content flex="80" style="height:100%;" md-style-color="{'background-color':'lettuce.default'}">
+        <div layout="row" layout-wrap class="custom-padding-between-cards" layout-align="center center">
+            <p ng-if="order.listOrder.length == 0" md-style-color="{'color':'accent.50'}" class="md-title">No hay items seleccionados</p>
+            <div layout="row" layout-align="center center" flex="50" flex-xs="100" flex-sm="50" ng-repeat="item in order.listOrder" flex>
+                <md-card ng-class="{'remove-margin': item.selected}" ng-click="order.selectedItem(item);" class="card-custom long-and-truncated-with-child-corrected md-whiteframe-8dp" layout="column" flex="100" md-style-color="{'background-color':'primary.default', 'color':'accent.50'}"
+                    md-theme-watch>
+                    <img class="md-card-image" alt="Image" src="{{item.url}}">
+                    <p class="md-caption m-truncate-90" style="padding-left:4px; padding-right:4px;"><b>{{item.name}}</b></p>
+                    <div layout="row" layout-align="end center">
+                        <div class="md-subhead" style="padding-right:4px;"><b>{{item.quantity}}</b></div>
+                    </div>
+                </md-card>
+            </div>
+        </div>
+    </md-content>
+    <div flex="20" layout="column" md-style-color="{'background-color':'blackseaweed.default'}">
+        <div layout="row" layout-fill>
+            <div layout="row" layout-align="start center">
+                <p>hello</p>
+            </div>
+            <div layout="row" layout-align="end center">
+                <md-button md-style-color="{'background-color':'salmon.default', 'color': 'accent.50'}" class="md-raised" aria-label="Pedir">Realizar pedido
+                    <md-buton>
+            </div>
+
+        </div>
+    </div>

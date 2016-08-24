@@ -1,6 +1,6 @@
 <div layout="row" layout-wrap class="custom-padding-between-cards" layout-align="center center">
     <div layout="row" layout-align="center center" flex="30" flex-xs="100" flex-sm="50" ng-repeat="item in list" flex>
-        <md-card class="long-and-truncated-with-child-corrected" layout="column" flex="100" md-style-color="{'background-color':'primary.default', 'color':'accent.50'}" md-theme-watch>
+        <md-card class="long-and-truncated-with-child-corrected md-whiteframe-8dp" layout="column" flex="100" md-style-color="{'background-color':'primary.default', 'color':'accent.50'}" md-theme-watch>
             <img class="md-card-image" alt="Image" src="{{item.url}}">
             <div class="md-headline m-truncate-90 custom-padding-title">{{item.name}}</div>
             <p class="md-subhead custom-padding-short-description" > {{item.shortDescription}}</p>
@@ -9,7 +9,7 @@
                     {{item.price}} {{item.currency}}
                 </div>
                 <div layout="row" layout-align="end center" flex="auto" class="custom-padding-card-button" style="padding-right:0px; padding-bottom:0px;">
-                    <md-button md-style-color="{'background-color':'salmon.default', 'color':'accent.50'}">Pedir ahora</md-button>
+                    <md-button ng-click="addItem(item);" md-style-color="{'background-color':'salmon.default', 'color':'accent.50'}">Pedir ahora</md-button>
                 </div>
             </md-card-actions>
         </md-card>
