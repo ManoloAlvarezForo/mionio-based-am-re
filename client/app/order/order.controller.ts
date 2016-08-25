@@ -7,6 +7,7 @@ class OrderController {
     this.getCurrentUser = Auth.getCurrentUser;
     this.state = $state;
     this.thereIsAnItemSelected = false;
+    this.tempTotalPrice = 0;
     this.oldItemSelected = null;
     this.sidenav = $mdSidenav;
     this.mocktabs = [{
@@ -190,6 +191,7 @@ class OrderController {
       item.quantity = 1;
       this.listOrder.unshift(item);
     }
+    this.tempTotalPrice += item.price;
   }
 
   removeItemToTheOrder(item) {
@@ -202,6 +204,7 @@ class OrderController {
       } else {
         this.listOrder[index].quantity -= 1;
       }
+      this.tempTotalPrice -= item.price;
   }
 
   incrementItem() {

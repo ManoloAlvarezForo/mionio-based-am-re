@@ -6,7 +6,7 @@
             <p class="md-subhead custom-padding-short-description" > {{item.shortDescription}}</p>
             <md-card-actions flex="20" layout="row" layout-align="center end" layout-padding layout-fill>
                 <div layout-align="center start" style="padding-bottom:0px;" class="md-headline custom-padding-price" flex="90">
-                    {{item.price}} {{item.currency}}
+                    <b>{{item.price}}</b><b style="margin-left:3px;" class="md-title">{{item.currency}}</b>
                 </div>
                 <div layout="row" layout-align="end center" flex="auto" class="custom-padding-card-button" style="padding-right:0px; padding-bottom:0px;">
                     <md-button ng-click="addItem(item);" md-style-color="{'background-color':'salmon.default', 'color':'accent.50'}">Pedir ahora</md-button>

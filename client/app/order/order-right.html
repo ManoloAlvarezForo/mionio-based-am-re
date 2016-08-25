@@ -18,7 +18,7 @@
             </md-button>
         </div>
     </md-toolbar>
-    <md-content flex="80" style="height:100%;" md-style-color="{'background-color':'lettuce.default'}">
+    <md-content flex="90" style="height:100%;" md-style-color="{'background-color':'lettuce.default'}">
         <div layout="row" layout-wrap class="custom-padding-between-cards" layout-align="center center">
             <p ng-if="order.listOrder.length == 0" md-style-color="{'color':'accent.50'}" class="md-title">No hay items seleccionados</p>
             <div layout="row" layout-align="center center" flex="50" flex-xs="100" flex-sm="50" ng-repeat="item in order.listOrder" flex>
@@ -27,21 +27,22 @@
                     <img class="md-card-image" alt="Image" src="{{item.url}}">
                     <p class="md-caption m-truncate-90" style="padding-left:4px; padding-right:4px;"><b>{{item.name}}</b></p>
                     <div layout="row" layout-align="end center">
-                        <div class="md-subhead" style="padding-right:4px;"><b>{{item.quantity}}</b></div>
+                        <div class="md-subhead" style="padding-right:4px;"><b>x{{item.quantity}}</b></div>
                     </div>
                 </md-card>
             </div>
         </div>
     </md-content>
-    <div flex="20" layout="column" md-style-color="{'background-color':'blackseaweed.default'}">
-        <div layout="row" layout-fill>
-            <div layout="row" layout-align="start center">
-                <p>hello</p>
+    <div flex="10" style="min-height:50px;"  layout="column" md-style-color="{'background-color':'blackseaweed.default'}" layout-padding>
+        <div layout="row" flex="100" layout-align="center center" >
+            <div layout="row"  flex="50" layout-align="start center">
+                <p class="md-headline" hide-sm hide-md show-lg md-style-color="{'color': 'accent.50'}"><b>Total: {{order.tempTotalPrice}} Bs.</b></p>
+                <p class="md-title" hide-sm hide-lg show-md md-style-color="{'color': 'accent.50'}"><b>Total: {{order.tempTotalPrice}} Bs.</b></p>
+                <p class="md-caption" hide-md hide-lg show-sm md-style-color="{'color': 'accent.50'}"><b>Total: {{order.tempTotalPrice}} Bs.</b></p>
             </div>
-            <div layout="row" layout-align="end center">
-                <md-button md-style-color="{'background-color':'salmon.default', 'color': 'accent.50'}" class="md-raised" aria-label="Pedir">Realizar pedido
-                    <md-buton>
+            <div layout="row" flex="50" layout-align="end center">
+                <md-button hide-sm hide-md hide-gt-lg md-style-color="{'background-color':'salmon.default', 'color': 'accent.50'}" class="md-raised" aria-label="Realizar pedido">Realizar pedido</md-button>
+                <md-button hide-lg style="font-size:12px" md-style-color="{'background-color':'salmon.default', 'color': 'accent.50'}" class="md-raised" aria-label="Pedir">Pedir</md-button>
             </div>
-
         </div>
     </div>
