@@ -1,40 +1,12 @@
-<md-tabs class="md-primary" md-swipe-content="true" flex="auto" flex-xs="100" flex-gt-xs="70" flex-sm="70" md-border-bottom md-center-tabs="true">
+<md-tabs class="md-primary" md-swipe-content="true" flex="auto" flex-xs="100" flex-gt-xs="70" flex-sm="70" md-border-bottom
+    md-center-tabs="true">
     <md-tab label="{{tab.tabname}}" ng-repeat="tab in order.mocktabs">
-        <order-list flex="100" list="tab.list"></order-list>
+        <order-list flex="100" list="tab.list" add="order.addItemToTheOrder(item)"></order-list>
     </md-tab>
 </md-tabs>
 <div layout="column" flex="30" flex-sm="30" flex-gt-xs="30" hide-xs>
-    <md-toolbar style="min-height:49px; height:49px;">
-        <div class="md-toolbar-tools">
-            <a href="/">
-                <b>Pedido</b>
-            </a>
-            <span flex></span>
-            <md-button class="md-icon-button" aria-label="Person add">
-                <a class="material-icons" href="">person_add</a>
-            </md-button>
-            <md-button ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Notifications">
-                <a class="material-icons" href="">notifications</a>
-            </md-button>
-        </div>
-    </md-toolbar>
-    <md-content flex layout='column' >
-        <div layout="column" layout-fill>
-            <div flex='auto' md-style-color="{'background-color':'salmon.default'}">
-                <div layout='row' flex-offset-sm="0" flex-offset-md="0" flex-offset-lg="0" flex-offset-gt-lg="0" layout-wrap layout-align="center center">
-                    <md-card>
-                        <img class="md-card-image" alt="Image" src="../assets/images/yeoman.png">
-                        <md-card-content>
-                            <!--<h2>Card headline</h2>-->
-                            <p><b>Card content</b></p>
-                        </md-card-content>
-                        <md-card-footer>
-                                        Card footer
-                                    </md-card-footer>
-                    </md-card>
-                </div>
-            </div>
-        </div>
-    </md-content>
-    <div flex="10">hello</div>
+    <order-right flex="100" layout="column" order="order"></order-right>
 </div>
+<md-sidenav style="overflow: hidden;" layout="column" class="md-sidenav-right" md-component-id="right">
+    <order-right flex="100" layout="column" order="order"></order-right>
+</md-sidenav>

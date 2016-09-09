@@ -7,16 +7,19 @@ class MainController {
     this.getCurrentUser = Auth.getCurrentUser;
     this.state = $state;
     this.timeout = $timeout;
+    this.sidenav = $mdSidenav;
     this.options = [
     {name: 'Mesas',
      icon: 'dashboard',
      action: function() {
+       $mdSidenav('left').close();
        $state.go('tables');
      }
     },
     {name: 'Para llevar',
-     icon: 'directions_walk',
+     icon: 'shopping_cart',
      action: function() {
+       $mdSidenav('left').close();
        $state.go('order', {
          type: 'togo',
          identifier: 1
@@ -27,6 +30,10 @@ class MainController {
 
   logout() {
     this.state.go('logout');
+  }
+
+  closeLeft() {
+      this.sidenav('left').close();
   }
 }
 

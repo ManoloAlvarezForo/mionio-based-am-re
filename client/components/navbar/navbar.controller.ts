@@ -29,6 +29,13 @@ class NavbarController {
           .then(function () {
           });
     }
+
+    toggleRight() {
+       this.sidenav('right')
+          .toggle()
+          .then(function () {
+          });
+    }
   }
 
 angular.module('mionioApp')

@@ -10,10 +10,7 @@
     <md-button ng-hide="nav.isLoggedIn()" class="md-raised" aria-label="Login">
       <a href="login">login</a>
     </md-button>
-    <md-button ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="Notifications">
-      <a class="material-icons" href="">notifications</a>
-    </md-button>
-    <md-button hide-sm ng-show="nav.isLoggedIn()" class="md-icon-button" aria-label="More">
+    <md-button hide-gt-md ng-show="nav.isLoggedIn()" ng-click="nav.toggleRight()" class="md-icon-button" aria-label="More">
       <a class="material-icons" href="">more_vert</a>
     </md-button>
     <md-button ng-hide="nav.isLoggedIn()" class="md-raised" aria-label="Signup">

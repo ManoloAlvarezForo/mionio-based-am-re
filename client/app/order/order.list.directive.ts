@@ -6,8 +6,14 @@ angular.module('mionioApp')
             restrict: 'E',
             replace: true,
             scope: {
-                list: '='
-            },
-            templateUrl: 'app/order/order-list-tab.html'
+                list: '=',
+                add: '&'
+             },
+            templateUrl: 'app/order/order-list-tab.html',
+            controller: function($scope) {
+                $scope.addItem = function(i) {
+                    $scope.add({item: i});
+                };
+            }
         };
 });
